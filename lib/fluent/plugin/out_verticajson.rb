@@ -43,7 +43,7 @@ module Fluent
         vertica.copy(<<-SQL) { |handle| handle.write(file_contents) }
           COPY #{perm_table}
           FROM STDIN
-          PARSER fjsonparser()
+          PARSER fjsonparser(flatten_maps=false)
           ENFORCELENGTH DIRECT
           REJECTED DATA AS TABLE #{@table}_rejected
         SQL
