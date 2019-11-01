@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 1.9.1'
 
-  spec.add_dependency 'fluentd', '~> 0.10.35'
+  spec.add_dependency 'fluentd', [">= 0.14.22", "< 2"]
   spec.add_dependency 'vertica'
   spec.add_dependency 'json'
 
