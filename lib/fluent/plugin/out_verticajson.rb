@@ -57,15 +57,14 @@ module Fluent
     private
 
     def vertica
-      @vertica ||= Vertica.connect({
-        :host     => @host,
-        :user     => @username,
-        :password => @password,
-        :ssl      => @ssl,
-        :port     => @port,
-        :database => @database
-      })
+      @vertica ||= Vertica.connect(
+        host: @host,
+        user: @username,
+        password: @password,
+        ssl: @ssl,
+        port: @port,
+        database: @database
+      )
     end
-
   end
 end
